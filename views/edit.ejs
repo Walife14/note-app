@@ -1,0 +1,19 @@
+<%- include('partials/header.ejs') %>
+
+<section class="container text-center">
+    <h1>Edit Note</h1>
+    <form action="/note/<%= note._id %>?_method=PATCH" method="POST">
+        <label for="title">Title</label>
+        <br>
+        <input type="text" id="title" name="title" value="<%= note.title %>">
+        <br>
+        <label for="description">Description</label>
+        <br>
+        <textarea name="description" id="description" cols="30" rows="3"><%= note.description %></textarea>
+        <br>
+        <button>Update</button>
+    </form>
+    <a href="/note/<%= note._id %>">Cancel</a>
+</section>
+
+<%- include('partials/footer.ejs') %>

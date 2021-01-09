@@ -1,0 +1,15 @@
+<%- include('partials/header.ejs') %>
+
+<section class="container">
+
+        <% for(let note of notes) { %>
+            <div class="container bg-light border my-2 p-2">
+                <span class="note-title fs-2 fw-bold"><%= note.title %></span>
+                <p class="note-description text-secondary"><%= note.description %></p>
+                <a class="btn btn-outline-info" href="/note/<%= note._id %>">Open...</a>
+            </div>
+        <% } %>
+
+</section>
+
+<%- include('partials/footer.ejs') %>

@@ -1,0 +1,21 @@
+<%- include('partials/header.ejs') %>
+<section class="container text-center">
+    <h1 class="bg-dark text-light border">New Note</h1>
+    <div class="bg-light border">
+        <form class="d-inline" action="/" method="POST">
+            <div>
+                <label class="d-block fs-2" for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div>
+                <label class="d-block fs-2" for="description">Description</label>
+                <textarea name="description" id="description" cols="60" rows="3" required></textarea>
+            </div>
+            <button class="btn btn-success m-2">Create Note</button>
+        </form>
+        <a class="btn btn-danger" href="/">Cancel</a>
+    </div>
+</section>
+
+<%- include('partials/footer.ejs') %>
+

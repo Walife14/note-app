@@ -1,0 +1,13 @@
+<%- include('partials/header.ejs') %>
+
+    <section class="container text-center bg-light p-2">
+        <h1 class="fw-bold"><%= note.title %></h1>
+        <p><%= note.description %></p>
+    <a class="btn btn-secondary" href="/note/<%= note._id %>/edit">Edit</a>
+    <form action="/note/<%= note._id %>?_method=DELETE" method="POST" class="d-inline">
+        <button class="btn btn-danger">Delete</button>
+    </form>
+    <a class="btn btn-primary mx-3" href="/">Back</a>
+    </section>
+
+<%- include('partials/footer.ejs') %>
